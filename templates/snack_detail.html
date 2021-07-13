@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="flex-direction: inherit; flex-wrap: wrap; background-color: lightcoral; text-align: center; border:50px;">
+<h3>title: {{ snack.title}}</h3>
+<h3>purchaser: {{ snack.purchaser}}</h3>
+<h3>description: {{ snack.description}}</h3>
+
+<a href="{% url 'snack_update' snack.pk %}"><button  style="border: 20px; background-color: aquamarine;">Update</button></a>
+
+<a href="{% url 'snack_delete' snack.pk %}"><button style="border: 20px; background-color: aquamarine;">Delete</button></a>
+</div>
+{% endblock content %}

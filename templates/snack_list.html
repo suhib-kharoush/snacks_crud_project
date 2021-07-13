@@ -1,0 +1,17 @@
+<body style="background-color: red;">
+    
+
+{% extends 'base.html' %}
+
+{% block content%}
+
+{% for item in object_list%}
+
+<a href="{% url 'snack_detail' item.pk%}"><h1 style="color:blue">{{item.title}}</h1></a>
+
+{% endfor %}
+
+<a href="{% url 'snack_create'%}"><button style="border: 20px; background-color: aquamarine;"> create new</button></a>
+{% endblock content%}
+
+</body>

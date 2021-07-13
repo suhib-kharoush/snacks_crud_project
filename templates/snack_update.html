@@ -1,0 +1,19 @@
+
+<body style="background-color: red;">
+    
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="" method="POST">
+
+{% csrf_token %}
+    {{ form.as_p }}
+
+    <input style="border: 20px; background-color: aquamarine;" type="submit" value="Update">
+
+</form>
+
+{% endblock content %}
+</body>
